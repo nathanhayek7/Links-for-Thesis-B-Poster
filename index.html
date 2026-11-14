@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thesis B - Post-Bushfire Water Quality in NSW Estuaries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap">
+    <style>
+        :root {
+            --navy: #244061;
+            --red: #8A0000;
+            --line: #E3E6EB;
+            --muted: #5F6670;
+            --soft: #F3F5F8;
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; }
+        body {
+            font-family: 'Public Sans', Arial, sans-serif;
+            color: #111;
+            background: var(--soft);
+            -webkit-text-size-adjust: 100%;
+        }
+        main {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 40px 20px 48px;
+        }
+        header { text-align: center; margin-bottom: 32px; }
+        h1 {
+            margin: 0;
+            font-size: clamp(22px, 4vw, 32px);
+            line-height: 1.25;
+            color: var(--navy);
+        }
+        .subtitle {
+            margin: 8px 0 0;
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--navy);
+        }
+        .author {
+            margin: 16px 0 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+        .author strong { color: var(--red); }
+
+        .tiles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .tile-wrap { display: flex; flex-direction: column; gap: 10px; }
+        a.tile {
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background: var(--navy);
+            border-radius: 16px;
+            box-shadow: 0 4px 14px rgba(16, 24, 40, 0.18);
+            transition: transform 0.15s, background 0.15s;
+        }
+        a.tile:hover, a.tile:focus-visible {
+            filter: brightness(0.88);
+            transform: translateY(-3px);
+            outline: 3px solid rgba(0, 0, 0, 0.15);
+            outline-offset: 2px;
+        }
+        a.tile.report { background: #1F5FAD; }
+        a.tile.sheet { background: #1E7B45; }
+        a.tile.map { background: var(--red); }
+        .tile svg { width: 64px; height: 64px; }
+        .tile-title { font-size: 24px; font-weight: 700; }
+        .tile-text { font-size: 15px; line-height: 1.4; opacity: 0.9; max-width: 22ch; }
+        .extra {
+            text-align: center;
+            font-size: 14px;
+        }
+        .extra a { color: var(--navy); font-weight: 600; }
+        footer a { color: var(--muted); }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--muted);
+        }
+
+        @media (max-width: 720px) {
+            .tiles { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+            a.tile { aspect-ratio: auto; min-height: 200px; }
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Predicting Post-Bushfire Water Quality in NSW Estuaries</h1>
+        <p class="subtitle">An Empirical Model from the 2019-20 Fires</p>
+        <p class="author"><strong>Nathan Hayek</strong><br>School of Engineering, Macquarie University</p>
+    </header>
+
+    <nav class="tiles" aria-label="Project links">
+        <div class="tile-wrap">
+            <a class="tile report" href="https://docs.google.com/document/d/11SUJP0pkgA2FQ7F1adFhSm7pHHknDKTheI5ke28p2lk/edit?usp=sharing">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+                    <path d="M14 3v5h5"/><path d="M9 13h6"/><path d="M9 17h6"/><path d="M9 9h2"/>
+                </svg>
+                <span class="tile-title">Report</span>
+                <span class="tile-text">Read the full Thesis B report</span>
+            </a>
+            <p class="extra"><a href="Thesis_B_Report.pdf" download>Download PDF</a></p>
+        </div>
+
+        <div class="tile-wrap">
+            <a class="tile sheet" href="https://docs.google.com/spreadsheets/d/1Rrh4qvAvv5Q2wgFtQCCYg48ZCba568wQ2jCkqw68rp8/copy">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="16" rx="2"/>
+                    <path d="M3 9h18"/><path d="M3 14.5h18"/><path d="M9 4v16"/><path d="M15 4v16"/>
+                </svg>
+                <span class="tile-title">Spreadsheet</span>
+                <span class="tile-text">Make your own copy of the model to try the Predict sheet (Google account needed)</span>
+            </a>
+            <p class="extra"><a href="Thesis_B_Model.xlsx" download>Download Excel (.xlsx)</a></p>
+        </div>
+
+        <div class="tile-wrap">
+            <a class="tile map" href="https://nathanhayek7.github.io/NSW-Estuary-Bushfire-Map/">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/>
+                    <path d="M9 4v14"/><path d="M15 6v14"/>
+                </svg>
+                <span class="tile-title">Interactive map</span>
+                <span class="tile-text">Tap the NSW coast to see predicted water quality changes</span>
+            </a>
+            <p class="extra"><a href="https://github.com/nathanhayek7/NSW-Estuary-Bushfire-Map">Map source code on GitHub</a></p>
+        </div>
+    </nav>
+
+    <footer>
+        Engineering Research Thesis B (CIVL4091), Macquarie University, 2026<br>
+        Supervisor: Dr. Bandita Mainali
+    </footer>
+</main>
+</body>
+</html>
